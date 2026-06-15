@@ -112,14 +112,23 @@ def make_frame(title):
 class GraphicsApplet(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="System76 Graphics Applet")
-        self.set_default_size(430, 180)
+        self.set_default_size(600, 180)
         self.set_border_width(12)
 
         self.current_mode = None
         self.pending_mode = None
 
+        root_scroll = Gtk.ScrolledWindow()
+        root_scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        self.add(root_scroll)
+        
         outer = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
-        self.add(outer)
+        outer.set_margin_top(12)
+        outer.set_margin_bottom(12)
+        outer.set_margin_start(12)
+        outer.set_margin_end(12)
+        
+        root_scroll.add(outer)
 
         # --- Bloc modes disponibles ---
         frame_modes = make_frame("Modes disponibles")
@@ -198,7 +207,7 @@ class GraphicsApplet(Gtk.Window):
 
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)   # Hauteur plus petite pour forcer l'apparition du scroll plus tôt
-        scrolled.set_size_request(-1, 80)     # Petite marge sous le bloc de sortie pour l'éloigner du bas de la fenêtre
+        scrolled.set_size_request(-1, 120)     # Petite marge sous le bloc de sortie pour l'éloigner du bas de la fenêtre
         scrolled.set_margin_bottom(10)
         
         output_box.pack_start(scrolled, True, True, 0)
