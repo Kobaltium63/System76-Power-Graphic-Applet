@@ -191,19 +191,25 @@ class GraphicsApplet(Gtk.Window):
 
         output_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         output_box.set_margin_top(10)
-        output_box.set_margin_bottom(10)
+        output_box.set_margin_bottom(14)
         output_box.set_margin_start(10)
         output_box.set_margin_end(10)
         frame_output.add(output_box)
 
         scrolled = Gtk.ScrolledWindow()
-        scrolled.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
-        scrolled.set_size_request(-1, 110)
+        scrolled.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)   # Hauteur plus petite pour forcer l'apparition du scroll plus tôt
+        scrolled.set_size_request(-1, 80)     # Petite marge sous le bloc de sortie pour l'éloigner du bas de la fenêtre
+        scrolled.set_margin_bottom(10)
+        
         output_box.pack_start(scrolled, True, True, 0)
 
         self.textview = Gtk.TextView()
         self.textview.set_editable(False)
         self.textview.set_wrap_mode(Gtk.WrapMode.WORD_CHAR)
+        self.textview.set_top_margin(6)    # Marge permettant plus de lisibilité
+        self.textview.set_bottom_margin(6)
+        self.textview.set_left_margin(6)
+        self.textview.set_right_margin(6)
         scrolled.add(self.textview)
 
         # --- Bouton refresh ---
