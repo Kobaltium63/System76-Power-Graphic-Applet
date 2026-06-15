@@ -1,6 +1,5 @@
 Vide Coded app to manage System76-power modes for computers with multiple GPUs
-
-# System76-Power-Graphic-Applet
+# System76 Graphics Applet
 
 Petit utilitaire graphique pour **Pop!_OS / Wayland** permettant de piloter la commande `system76-power graphics` depuis une fenêtre GTK et, selon le support de la barre système, depuis une icône dans le panneau supérieur.
 
@@ -143,3 +142,9 @@ Selon l'environnement et le support de la barre système, `Gtk.StatusIcon` peut 
 ## Public visé
 
 Cet outil est surtout utile pour les utilisateurs de **Pop!_OS** qui veulent une petite interface graphique simple au-dessus de `system76-power graphics`, sans devoir saisir la commande à la main à chaque fois.
+
+## Note sur la création et responsabilité
+
+Cet outil a été conçu avec l'aide de **Perplexity**, dans une logique de prototypage rapide et d'automatisation assistée. Il s'agit donc d'un projet pratique, pensé pour simplifier l'usage de `system76-power graphics`, mais pas d'un logiciel officiellement validé, certifié ou garanti pour tous les matériels, toutes les versions de Pop!_OS ou toutes les configurations NVIDIA / hybride.
+
+Le créateur met cet outil à disposition de bonne foi, comme une surcouche utilitaire autour d'une commande existante, mais son fonctionnement n'est **pas garanti**. Comme pour beaucoup d'outils distribués en mode libre ou personnel, il doit être considéré comme fourni **"tel quel"**, sans promesse de compatibilité parfaite, d'absence de bug, ni d'adaptation à un usage particulier[1][2]. En conséquence, son utilisation se fait sous la responsabilité de l'utilisateur, qui reste libre de vérifier les commandes exécutées, de relire le code, et de tester le comportement de l'application sur sa propre machine avant un usage régulier ou sensible[3][4].
