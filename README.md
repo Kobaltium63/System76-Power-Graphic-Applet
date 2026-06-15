@@ -1,7 +1,6 @@
-# System76-Power-Graphic-Applet
 Vide Coded app to manage System76-power modes for computers with multiple GPUs
 
-# System76 Graphics Applet
+# System76-Power-Graphic-Applet
 
 Petit utilitaire graphique pour **Pop!_OS / Wayland** permettant de piloter la commande `system76-power graphics` depuis une fenêtre GTK et, selon le support de la barre système, depuis une icône dans le panneau supérieur.
 
