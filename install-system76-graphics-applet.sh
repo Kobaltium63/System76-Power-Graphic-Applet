@@ -112,7 +112,7 @@ def make_frame(title):
 class GraphicsApplet(Gtk.Window):
     def __init__(self):
         Gtk.Window.__init__(self, title="System76 Graphics Applet")
-        self.set_default_size(430, 360)
+        self.set_default_size(430, 180)
         self.set_border_width(12)
 
         self.current_mode = None
